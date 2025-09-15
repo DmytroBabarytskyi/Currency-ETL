@@ -1,0 +1,22 @@
+[2025-09-10T09:02:22.342+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-09-10T09:02:22.451+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: currency_etl.load manual__2025-09-10T09:02:12.149059+00:00 [queued]>
+[2025-09-10T09:02:22.472+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: currency_etl.load manual__2025-09-10T09:02:12.149059+00:00 [queued]>
+[2025-09-10T09:02:22.473+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-09-10T09:02:22.523+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): load> on 2025-09-10 09:02:12.149059+00:00
+[2025-09-10T09:02:22.544+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'currency_etl', 'load', 'manual__2025-09-10T09:02:12.149059+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/currency_etl.py', '--cfg-path', '/tmp/tmp8j7ji6oa']
+[2025-09-10T09:02:22.550+0000] {standard_task_runner.py:105} INFO - Job 130: Subtask load
+[2025-09-10T09:02:22.552+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=274) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-09-10T09:02:22.554+0000] {standard_task_runner.py:72} INFO - Started process 275 to run task
+[2025-09-10T09:02:22.856+0000] {task_command.py:467} INFO - Running <TaskInstance: currency_etl.load manual__2025-09-10T09:02:12.149059+00:00 [running]> on host e9dc4273a658
+[2025-09-10T09:02:23.291+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='currency_etl' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2025-09-10T09:02:12.149059+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-10T09:02:12.149059+00:00'
+[2025-09-10T09:02:23.293+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-09-10T09:02:23.323+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-10T09:02:23.326+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/load.py']
+[2025-09-10T09:02:23.354+0000] {subprocess.py:86} INFO - Output:
+[2025-09-10T09:02:26.026+0000] {subprocess.py:93} INFO - Loaded to DB
+[2025-09-10T09:02:26.207+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-10T09:02:26.419+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-09-10T09:02:26.421+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=currency_etl, task_id=load, run_id=manual__2025-09-10T09:02:12.149059+00:00, execution_date=20250910T090212, start_date=20250910T090222, end_date=20250910T090226
+[2025-09-10T09:02:26.522+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-09-10T09:02:26.654+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-10T09:02:26.678+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

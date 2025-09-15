@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Environments
+.env
+*.env
+
+# Airflow
+airflow/logs/
+airflow/dags/__pycache__/
+airflow/airflow.db
+
+# Docker
+*.pid
+*.sock
+
+# Reports / data
+reports/
+data/
+*.parquet
+*.csv
+*.json
+*.txt

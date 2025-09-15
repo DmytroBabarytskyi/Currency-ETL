@@ -1,0 +1,18 @@
+[2025-09-10T08:51:50.253+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-09-10T08:51:50.367+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: currency_etl.analyze manual__2025-09-10T08:51:32.903344+00:00 [queued]>
+[2025-09-10T08:51:50.388+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: currency_etl.analyze manual__2025-09-10T08:51:32.903344+00:00 [queued]>
+[2025-09-10T08:51:50.389+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-09-10T08:51:50.436+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): analyze> on 2025-09-10 08:51:32.903344+00:00
+[2025-09-10T08:51:50.455+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'currency_etl', 'analyze', 'manual__2025-09-10T08:51:32.903344+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/currency_etl.py', '--cfg-path', '/tmp/tmpfsnx4io4']
+[2025-09-10T08:51:50.461+0000] {standard_task_runner.py:105} INFO - Job 115: Subtask analyze
+[2025-09-10T08:51:50.461+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=224) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-09-10T08:51:50.463+0000] {standard_task_runner.py:72} INFO - Started process 225 to run task
+[2025-09-10T08:51:50.761+0000] {task_command.py:467} INFO - Running <TaskInstance: currency_etl.analyze manual__2025-09-10T08:51:32.903344+00:00 [running]> on host c132f747d056
+[2025-09-10T08:51:51.205+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='currency_etl' AIRFLOW_CTX_TASK_ID='analyze' AIRFLOW_CTX_EXECUTION_DATE='2025-09-10T08:51:32.903344+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-10T08:51:32.903344+00:00'
+[2025-09-10T08:51:51.207+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-09-10T08:51:53.192+0000] {font_manager.py:1584} INFO - generated new fontManager
+[2025-09-10T08:51:54.263+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-09-10T08:51:54.356+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-09-10T08:51:54.358+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=currency_etl, task_id=analyze, run_id=manual__2025-09-10T08:51:32.903344+00:00, execution_date=20250910T085132, start_date=20250910T085150, end_date=20250910T085154
+[2025-09-10T08:51:54.515+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-09-10T08:51:54.600+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
