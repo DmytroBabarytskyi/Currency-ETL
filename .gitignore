@@ -25,3 +25,16 @@ data/
 *.csv
 *.json
 *.txt
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# Airflow / Postgres data
+airflow_data/
+logs/
+pgdata/
+dump.sql
+
+# Docker build artifacts
+*.log
